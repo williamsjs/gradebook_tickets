@@ -10,10 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- 
+
 
  */
- @import "bourbon";
- @import "base/grid-settings";
- @import "neat";
- @import "base/base";
+@import "bourbon";
+@import "base/grid-settings";
+@import "neat";
+@import "base/base";
+// body {
+//   cursor: asset_url('blackboard-with-chalk.jpg'), default;
+// }
