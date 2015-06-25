@@ -6,11 +6,13 @@ class GradesController < ApplicationController
   # GET /grades.json
   def index
     @grades = Grade.all
+
   end
 
   # GET /grades/1
   # GET /grades/1.json
   def show
+    @assignments = Assignment.all
   end
 
   # GET /grades/new
@@ -21,12 +23,14 @@ class GradesController < ApplicationController
 
   # GET /grades/1/edit
   def edit
+    @assignments = Assignment.all
   end
 
   # POST /grades
   # POST /grades.json
   def create
     @grade = Grade.new(grade_params)
+
 
     respond_to do |format|
       if @grade.save
