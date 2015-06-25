@@ -29,6 +29,8 @@ For this weekend project, you will be claiming a GitHub issue which exists on th
 
 You will work in pairs on your own branch to complete your GitHub issue.  When you are finished, you will create a pull request.  The first pull request will be reviewed and accepted by the instructor.
 
+Immediately after your changes are merged into master, you must also deploy to Heroku, test your work, and fix any bugs that appear.
+
 The second group (and later groups) to create a pull request will have their pull request reviewed by the group that finished immediately before them.  For instance, group B will have their pull request reviewed by group A.  Group A should look for modifications that would improve the code and suggest them to group B.  Group B will then make the modifications, push their latest code, and notify group A to review again.  
 
 If group A approves of the request and the request can be automatically merged, group A should do so.  If the request is approved but cannot be automatically merged, they should notify group B, and it is then group B's responsibility to deal with the merge conflicts and merge to master themselves.
