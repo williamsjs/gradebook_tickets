@@ -7,4 +7,11 @@ class Assignment < ActiveRecord::Base
     students = Student.where(teacher_id: self.teacher.id).count
     self.grades.sum(:score)/students
   end
+
+  def assign
+    students = Student.where(teacher_id: self.teacher.id)
+    students.each do |s|
+      Grade.create(student_id: s.id, assignment_id: self.id)
+    end
+  end
 end
