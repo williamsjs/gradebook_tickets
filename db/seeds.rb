@@ -10,3 +10,4 @@
 Teacher.create(name: "Test", email: "test@test.com", password: "password")
 Student.create(name: "Student", email: "student@student.com", password: "password", teacher_id: 1)
 Parent.create(name: "Parent", email: "parent@parent.com", password: "password", student_id: 1)
+5.times {Grade.create!(assignment_id: rand(1..5), score: rand(70..100), student_id: 1)}
