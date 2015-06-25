@@ -19,7 +19,7 @@
  @import "base/base";
 //nav options, findnav, findfoot, find hero
 $visual-grid: true !default;
- body{ $visual-grid: true !default;
+ body{@include background(radial-gradient(rgb(26, 148, 221),rgb(3, 84, 123)));
 
  }
 
@@ -28,6 +28,7 @@ $visual-grid: true !default;
    @include padding(20px 20px 20px 20px);
    @include position(relative, 5px 5em 10px 5em);
    @include margin(100px 375px ); width:25%;
+   background-color: white;
  }
 
 
@@ -42,6 +43,7 @@ $visual-grid: true !default;
 
    a {
      text-decoration: none;
+     color:white
    }
    //////////////////////////////////////////////////////////////////////////////////
 
@@ -395,6 +397,7 @@ $visual-grid: true !default;
    height: auto !important;
    height: 50%;
    margin: 0 auto -4em;
+
  }
 
  html, body {
