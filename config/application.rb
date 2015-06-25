@@ -25,9 +25,9 @@ module Gradebook
     config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
-      :bucket => 'grade-pdf',
-      :access_key_id => 'AKIAJBRFZWELZ6EP7LKA',
-      :secret_access_key => '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'
+      :bucket => ENV['GRADE_PDF_BUCKET'],
+      :access_key_id => ENV['GRADE_PDF_ACCESS'],
+      :secret_access_key => ENV['GRADE_PDF_SECRET']
   }
 }
   end
