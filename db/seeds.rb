@@ -16,7 +16,7 @@ bobby = Student.create!(name: "Bobby Tables", email: "bobby@student.com", passwo
 susy = Student.create!(name: "Susy Q", email: "susy@student.com", password: "password", teacher_id: 1)
 jimmy = Student.create!(name: "Jimmy", email: "jimmy@student.com", password: "password", teacher_id: 1)
 
-assignment = Assignment.create!(name: "Algebra Lesson 1", due: Time.now)
+assignment = Assignment.create!(name: "Algebra Lesson 1", due: Time.now, teacher_id: 1)
 
 Grade.create!(score: 35, assignment_id: assignment.id, student_id: bobby.id)
 Grade.create!(score: 85, assignment_id: assignment.id, student_id: susy.id)
