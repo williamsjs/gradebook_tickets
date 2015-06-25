@@ -10,25 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
- *= require "bootstrap"
+ 
+
  */
-
-.title{
- font-family: cursive;
- .img{
-   height: 80px;
-   margin-left: 20px;
- }
-}
-
-.description{
- font-family: cursive;
-}
-
-.name{
- font-family: ariel;
- font-weight: bolder;
- font-size: 15px;
-}
+ @import "bourbon";
+ @import "base/grid-settings";
+ @import "neat";
+ @import "base/base";
