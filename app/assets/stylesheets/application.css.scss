@@ -18,8 +18,16 @@
  @import "neat";
  @import "base/base";
 //nav options, findnav, findfoot, find hero
- body{
+$visual-grid: true !default;
+ body{ $visual-grid: true !default;
 
+ }
+
+ #login{
+   @include border-style(solid);
+   @include padding(20px 20px 20px 20px);
+   @include position(relative, 5px 5em 10px 5em);
+   @include margin(100px 375px ); width:25%;
  }
 
 
@@ -385,7 +393,7 @@
  .wrapper-for-content-outside-of-footer {
    min-height: 100%;
    height: auto !important;
-   height: 100%;
+   height: 50%;
    margin: 0 auto -4em;
  }
 
