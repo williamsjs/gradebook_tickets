@@ -13,8 +13,8 @@
   <%= @parent.student_id %>
 </p>
 
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_parent_path(@parent) %></button>
-  <button type="button" class="btn btn-default"><%= link_to 'View All Parents', parents_path %></button>
-  <button type="button" class="btn btn-default"><%= link_to 'Home', root_path %></button>
+<div >
+  <%= link_to 'Edit', edit_parent_path(@parent) %>
+  <%= link_to 'View All Parents', parents_path %>
+  <%= link_to 'Home', root_path %>
 </div>
