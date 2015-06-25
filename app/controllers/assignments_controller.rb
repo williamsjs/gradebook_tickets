@@ -12,11 +12,13 @@ class AssignmentsController < ApplicationController
   # GET /assignments/1.json
   def show
     @grades = Grade.where(assignment_id: @assignment.id)
+    @students = Student.where(teacher_id: session[:user_id])
   end
 
   # GET /assignments/new
   def new
-    @assignment = Assignment.new
+    @assignment = Assignment.new(teacher_id: session[:user_id])
+    @teacher = Teacher.find_by_id(session[:user_id])
   end
 
   # GET /assignments/1/edit
@@ -27,6 +29,7 @@ class AssignmentsController < ApplicationController
   # POST /assignments.json
   def create
     @assignment = Assignment.new(assignment_params)
+    @assignment.assign
 
     respond_to do |format|
       if @assignment.save
@@ -79,6 +82,6 @@ class AssignmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def assignment_params
-      params.require(:assignment).permit(:name, :due, grades_attributes: [:id, :score, :student_id])
+      params.require(:assignment).permit(:teacher_id, :name, :due, grades_attributes: [:id, :score, :student_id])
     end
 end
