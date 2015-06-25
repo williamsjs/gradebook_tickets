@@ -13,6 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$('#playsound').click(function (e) {
+    $('#sound_effect')[0].currentTime = 0;
+    $('#sound_effect')[0].play();
+    return false;
+});
+
 
 $(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
