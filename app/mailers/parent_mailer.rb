@@ -1,0 +1,2 @@
+class ParentMailer < ApplicationMailer
+end
