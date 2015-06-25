@@ -11,7 +11,8 @@ class AssignmentsController < ApplicationController
   # GET /assignments/1
   # GET /assignments/1.json
   def show
-    @grades = Grade.all
+    @grades = Grade.where(assignment_id: @assignment.id)
+    @students = @assignment.students
   end
 
   # GET /assignments/new
