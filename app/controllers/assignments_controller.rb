@@ -23,16 +23,17 @@ class AssignmentsController < ApplicationController
 
   # GET /assignments/1/edit
   def edit
+    @teacher = Teacher.find_by_id(session[:user_id])
   end
 
   # POST /assignments
   # POST /assignments.json
   def create
     @assignment = Assignment.new(assignment_params)
-    @assignment.assign
 
     respond_to do |format|
       if @assignment.save
+        @assignment.assign
         format.html { redirect_to assignments_path, notice: 'Assignment was successfully created.' }
         format.json { render :show, status: :created, location: @assignment }
       else
