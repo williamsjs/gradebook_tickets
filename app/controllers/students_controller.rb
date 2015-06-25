@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
 
   # GET /students/new
   def new
+    @teacher = Teacher.find_by_id(session[:user_id])
     @student = Student.new(teacher_id: session[:user_id])
   end
 

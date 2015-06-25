@@ -12,7 +12,6 @@ class AssignmentsController < ApplicationController
   # GET /assignments/1.json
   def show
     @grades = Grade.where(assignment_id: @assignment.id)
-    @students = Student.where(teacher_id: session[:user_id])
   end
 
   # GET /assignments/new
@@ -37,6 +36,14 @@ class AssignmentsController < ApplicationController
         format.html { render :new }
         format.json { render json: @assignment.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def update_grades
+    if @assignment.update(assignment_params)
+      render '/assignments/grade_entry'
+    else
+      render :show
     end
   end
 
