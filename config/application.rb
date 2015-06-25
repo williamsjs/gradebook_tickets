@@ -22,5 +22,13 @@ module Gradebook
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+      :bucket => 'grade-pdf',
+      :access_key_id => 'AKIAJBRFZWELZ6EP7LKA',
+      :secret_access_key => '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'
+  }
+}
   end
 end
