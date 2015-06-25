@@ -1,0 +1,23 @@
+<%= form_for(@assignment) do |f| %>
+  <% if @assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% @assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :grades do |ff| %>
+    <tr>
+      <td><%= ff.object.student.name %></td>
+      <td><%= ff.number_field :score, placeholder: ff.object.score %></td>
+    </tr>
+  <% end %>
+
+  <%= f.submit "Submit Grades" %>
+
+<% end %>

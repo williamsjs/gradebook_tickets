@@ -11,7 +11,8 @@ class AssignmentsController < ApplicationController
   # GET /assignments/1
   # GET /assignments/1.json
   def show
-    @grades = Grade.all
+    @grades = Grade.where(assignment_id: @assignment.id)
+    @students = Student.where(teacher_id: session[:user_id])
   end
 
   # GET /assignments/new
@@ -71,6 +72,6 @@ class AssignmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def assignment_params
-      params.require(:assignment).permit(:name, :due)
+      params.require(:assignment).permit(:name, :due, grades_attributes: [:id, :score, :student_id])
     end
 end
