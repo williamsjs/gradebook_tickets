@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :teachers
+  devise_for :students
+  devise_for :parents
   get 'dashboard/student'
 
   get 'dashboard/parent'

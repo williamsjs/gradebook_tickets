@@ -9,7 +9,8 @@
 <body>
 
   <%= link_to "Logout", sessions_logout_path if session[:user_id] %>
-  <p id="notice"><%= notice %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <div class="container">
     <div class="row">
       <%= yield %>

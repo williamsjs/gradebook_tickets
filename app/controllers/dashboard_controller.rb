@@ -1,7 +1,10 @@
 class DashboardController < ApplicationController
-  before_action :teacher_logged_in?, only: [:instructor]
-  before_action :student_logged_in?, only: [:student]
-  before_action :parent_logged_in?, only: [:parent]
+  before_action :authenticate_teacher!
+  before_action :authenticate_parent!
+  before_action :authenticate_student!
+  # before_action :teacher_logged_in?, only: [:instructor]
+  # before_action :student_logged_in?, only: [:student]
+  # before_action :parent_logged_in?, only: [:parent]
 
   def index
     if session[:user_type] == "teacher"
@@ -10,8 +13,6 @@ class DashboardController < ApplicationController
       redirect_to :controller => 'dashboard', :action => 'student'
     elsif session[:user_type] == "parent"
       redirect_to :controller => 'dashboard', :action => 'parent'
-    else
-      redirect_to sessions_login_path
     end
   end
 
