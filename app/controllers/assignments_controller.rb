@@ -45,8 +45,7 @@ class AssignmentsController < ApplicationController
 
   def update_grades
     if @assignment.update(assignment_params)
-      @assignment.average
-      render '/assignments/update'
+      render 'assignments/update'
     else
       render :show
     end

@@ -12,13 +12,13 @@
   <% end %>
 
   <%= f.fields_for :grades do |ff| %>
-    <tr>
-      <td><%= ff.object.student.name %></td>
-      <td><%= ff.number_field :score %></td>
-    </tr>
+    <div>
+      <span><%= ff.object.student.name %></span>
+      <span><%= ff.number_field :score, value: ff.object.score %></span>
+    </div></br>
   <% end %>
 
-  <%= f.submit "Submit Grades" %>
+  <%= f.submit "Submit Grades", id: "submit-change-grades"%>
 
 <% end %>
 

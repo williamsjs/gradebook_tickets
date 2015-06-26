@@ -11,18 +11,9 @@
 </p>
 
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Student</th>
-        <th>Grade</th>
-      </tr>
-    </thead>
+  <div id="assignment-show-table-body"><%= render partial: 'grade_entry' %></div>
 
-    <tbody id="assignment-show-table-body">
-      <%= render partial: 'grade_entry' %>
-    </tbody>
-  </table>
+
 
 <div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-default"><%= link_to 'All Assignments', assignments_path %></button>
