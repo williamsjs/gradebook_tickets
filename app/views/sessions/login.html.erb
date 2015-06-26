@@ -1,4 +1,4 @@
-<h1>Login</h1>
+<!-- <h1>Login</h1>
 
 <div class="app-form">
   <%= form_tag do %>
@@ -8,7 +8,7 @@
     <%= password_field_tag :password %>
     <%= submit_tag "Login"%>
   <% end %>
-</div>
+</div> -->
 
 
 <!-- <div class="image-gradient-dynamic">
@@ -19,12 +19,36 @@
   </div>
 </div> -->
 
-<!-- <div class="hero">
+<div class="hero">
 	<div class="hero-inner">
     <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image"></a>
 		<div class="hero-copy">
 			<h1>Gradebook</h1>
-			<p>A few reasons why this product is worth using, who it's for and why they need it.</p>
+
+
+
+      <div class="modal">
+        <label for="modal-1">
+          <div class="modal-trigger">Click for Modal</div>
+        </label>
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal-window">
+          <div class="modal-inner">
+            <label class="modal-close" for="modal-1"></label>
+
+            <%= render partial: '/refills/modal' %>        
+  </div>
+        </div>
+      </div>
+
+
+
+
+
 		</div>
+    <button>Learn More</button>
+    <p>
+      jaoweifj
+    </p>
 	</div>
-</div> -->
+</div>
