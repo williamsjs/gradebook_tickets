@@ -17,12 +17,8 @@
       <span><%= ff.number_field :score, value: ff.object.score %></span>
     </div></br>
   <% end %>
+  <h4>Class Average: <span id="average"><%= @assignment.average %></span></h4>
 
   <%= f.submit "Submit Grades", id: "submit-change-grades"%>
 
 <% end %>
-
-<tr>
-  <td>Class Average</td>
-  <td id="average"><%= @assignment.average %></td>
-</tr>
