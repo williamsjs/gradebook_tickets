@@ -17,6 +17,13 @@ Rails.application.routes.draw do
 
   get 'dashboard/index'
   root 'dashboard#index'
+
+  get 'api/teachers' => 'teachers#index'
+  get 'api/teachers/:id' => 'teachers#show'
+  get 'api/students' => 'students#index'
+  get 'api/students/:id' => 'students#show'
+  get 'api/assignments' => 'assignments#index'
+  get 'api/assignments' => 'assignments#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
