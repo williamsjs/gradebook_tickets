@@ -7,3 +7,8 @@ one:
 two:
   name: "assignment2"
   due: 2015-06-10
+
+three:
+  name: "assignment3"
+  due: 2015-06-10
+  
