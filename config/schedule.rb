@@ -18,3 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+every :friday, :at => '12am' do
+  runner "ParentEmailJob.perform"
+end
