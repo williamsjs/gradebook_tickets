@@ -17,12 +17,17 @@
 @import "base/grid-settings";
 @import "neat";
 @import "base/base";
+@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Covered+By+Your+Grace|Rock+Salt); //We only use Rock+Salt, maybe we shoudl delete the other two fonts
 
 //nav options, findnav, findfoot, find hero
 $visual-grid: true !default;
 body {
   $visual-grid: true !default;
+
 }
+
+
+
 #login {
   @include border-style(solid);
   @include padding(20px 20px 20px 20px);
