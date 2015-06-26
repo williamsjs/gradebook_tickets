@@ -1,4 +1,4 @@
-<%= form_for @assignment, remote: true do |f| %>
+<%= form_for @assignment, url: update_grades_assignment_path(@assignment), remote: true do |f| %>
   <% if @assignment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
@@ -14,7 +14,7 @@
   <%= f.fields_for :grades do |ff| %>
     <tr>
       <td><%= ff.object.student.name %></td>
-      <td><%= ff.number_field :score, placeholder: ff.object.score %></td>
+      <td><%= ff.number_field :score %></td>
     </tr>
   <% end %>
 

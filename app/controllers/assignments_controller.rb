@@ -1,6 +1,6 @@
 class AssignmentsController < ApplicationController
   before_action :teacher_logged_in?
-  before_action :set_assignment, only: [:show, :edit, :update, :destroy]
+  before_action :set_assignment, only: [:show, :edit, :update, :destroy, :update_grades]
 
   # GET /assignments
   # GET /assignments.json
@@ -45,7 +45,8 @@ class AssignmentsController < ApplicationController
 
   def update_grades
     if @assignment.update(assignment_params)
-      render '/assignments/grade_entry'
+      @assignment.average
+      render '/assignments/update'
     else
       render :show
     end

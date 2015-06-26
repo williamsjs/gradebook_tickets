@@ -1,3 +1,5 @@
+alert("yay");
+var avg = <% @assignment.average %>;
 
-$("#assignment-show-table-body").html("<%= j (render partial: 'grade_entry') %>");
-$("#average").html("<%= @assignment.average %>")
+$("#assignment-show-table-body").html("<%= j(render partial: 'grade_entry') %>");
+$("#average").text(avg);
